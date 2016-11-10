@@ -179,11 +179,11 @@ Polymer({
       value: {
         show: function() {
           var tsChart = Polymer.dom(this.chart.renderTo).parentNode.parentNode;
-          tsChart.set('chartState.seriesState', this.chart.series);
+          tsChart.set('chartState.seriesState', this.chart.series.slice());
         },
         hide: function() {
           var tsChart = Polymer.dom(this.chart.renderTo).parentNode.parentNode;
-          tsChart.set('chartState.seriesState', this.chart.series);
+          tsChart.set('chartState.seriesState', this.chart.series.slice());
         }
       }
     },
